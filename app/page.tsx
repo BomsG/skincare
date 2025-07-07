@@ -339,13 +339,16 @@ export default function HomePage() {
           <div className="relative">
             <div className="overflow-hidden">
               <div
-                className="flex transition-transform duration-700 ease-in-out"
+                className="flex gap-3 transition-transform duration-700 ease-in-out snap-mandatory scroll-smooth"
                 style={{
                   transform: `translateX(-${(currentSlide * 100) / 4}%)`,
                 }}
               >
                 {featuredProducts.map((product, index) => (
-                  <div key={product.id} className="w-1/4 flex-shrink-0 px-3">
+                  <div
+                    key={product.id}
+                    className="w-[85%] sm:w-[45%] md:w-1/3 lg:w-1/4 flex-shrink-0 snap-start "
+                  >
                     <Card
                       className={`group hover:shadow-2xl transition-all duration-700 hover:-translate-y-6 cursor-pointer overflow-hidden border-0 shadow-lg hover:shadow-rose-200/50 animate-slide-in-stagger bg-white/80 backdrop-blur-sm`}
                       style={{ animationDelay: `${index * 0.1}s` }}
@@ -359,7 +362,6 @@ export default function HomePage() {
                           />
                           <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"></div>
 
-                          {/* Floating Badges */}
                           {product.isNew && (
                             <Badge className="absolute top-3 left-3 bg-green-600 animate-bounce-gentle shadow-lg">
                               New
@@ -371,7 +373,6 @@ export default function HomePage() {
                             </Badge>
                           )}
 
-                          {/* Hover Overlay */}
                           <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500">
                             <div className="flex gap-3 transform translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
                               <Button

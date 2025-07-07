@@ -60,7 +60,7 @@ export default function BlogPage() {
                 placeholder="Search articles..."
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="pl-12 pr-4 py-4 text-lg bg-white/90 backdrop-blur-sm border-0 rounded-xl focus:bg-white transition-all duration-300"
+                className="pl-12 pr-4 py-4 text-lg text-black bg-white/90 backdrop-blur-sm border-0 rounded-xl focus:bg-white transition-all duration-300"
               />
             </div>
           </div>
