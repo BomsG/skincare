@@ -194,7 +194,7 @@ export const products: Product[] = [
     price: 26.99,
     description:
       "A lightweight serum with 10% niacinamide that minimizes pores, controls oil production, and improves skin texture for a smoother complexion.",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/images/p7.jpg",
     rating: 4.7,
     reviews: 445,
     skinTypes: ["Oily", "Combination", "Normal"],
@@ -223,7 +223,7 @@ export const products: Product[] = [
     originalPrice: 34.99,
     description:
       "A mild exfoliating toner with AHA and BHA that removes dead skin cells, unclogs pores, and reveals brighter, smoother skin.",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/images/p8.jpg",
     rating: 4.6,
     reviews: 278,
     skinTypes: ["Normal", "Oily", "Combination"],
@@ -254,7 +254,7 @@ export const products: Product[] = [
     price: 34.99,
     description:
       "A gentle, fragrance-free moisturizer specifically formulated for sensitive skin. Provides long-lasting hydration while calming irritation and redness.",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/images/p9.jpg",
     rating: 4.9,
     reviews: 167,
     skinTypes: ["Sensitive", "Dry"],
@@ -285,7 +285,7 @@ export const products: Product[] = [
     price: 42.99,
     description:
       "A rich eye cream that targets fine lines, dark circles, and puffiness. Contains powerful antioxidants and peptides for visible anti-aging results.",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/images/p11.jpg",
     rating: 4.4,
     reviews: 89,
     skinTypes: ["All"],
@@ -309,7 +309,7 @@ export const products: Product[] = [
     price: 18.99,
     description:
       "A targeted spot treatment that quickly reduces the appearance of blemishes. Contains benzoyl peroxide and tea tree oil for fast-acting results.",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/images/p10.jpg",
     rating: 4.3,
     reviews: 234,
     skinTypes: ["Oily", "Combination"],
@@ -338,7 +338,7 @@ export const products: Product[] = [
     originalPrice: 21.99,
     description:
       "A refreshing facial mist that instantly hydrates and revitalizes skin throughout the day. Perfect for setting makeup or midday touch-ups.",
-    image: "/placeholder.svg?height=400&width=400",
+    image: "/images/p8.jpg",
     rating: 4.5,
     reviews: 312,
     skinTypes: ["All"],

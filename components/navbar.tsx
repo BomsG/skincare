@@ -42,7 +42,6 @@ export function Navbar() {
           <div className="hidden md:flex items-center space-x-8">
             {[
               { href: "/products", label: "Products" },
-              { href: "/categories", label: "Categories" },
               { href: "/quiz", label: "Skin Test" },
               { href: "/blog", label: "Blog" },
               { href: "/about", label: "About" },

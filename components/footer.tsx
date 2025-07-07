@@ -235,7 +235,7 @@ export function Footer() {
               </Link>
             </div>
             <p className="text-sm text-gray-400">
-              © 2024 SkinCare. All rights reserved.
+              © 2025 SkinCare. All rights reserved.
             </p>
           </div>
         </div>

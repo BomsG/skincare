@@ -175,13 +175,13 @@ export default function HomePage() {
                     >
                       ✨ Soft • Clean • Effective
                     </Badge>
-                    <h1 className="text-6xl md:text-8xl font-serif font-bold text-white mb-6 tracking-wider">
+                    <h1 className="text-5xl md:text-8xl font-serif font-bold text-white mb-6 tracking-wider">
                       {slide.title}
                       <span className="block text-[#BF6159] animate-gradient-text-mega bg-gradient-to-r from-[#BF6159] via-pink-600 to-[#BF6159] bg-clip-text text-transparent">
                         {slide.highlight}
                       </span>
                     </h1>
-                    <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-[16px] md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
                       {slide.subtitle}
                     </p>
                     <div className="flex flex-col sm:flex-row gap-6 justify-center">

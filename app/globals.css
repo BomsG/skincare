@@ -475,7 +475,8 @@ html {
 
 /* Gradient Borders */
 .gradient-border {
-  background: linear-gradient(white, white) padding-box, linear-gradient(45deg, #f43f5e, #ec4899) border-box;
+  background: linear-gradient(white, white) padding-box,
+    linear-gradient(45deg, #f43f5e, #ec4899) border-box;
   border: 2px solid transparent;
 }
 
@@ -800,7 +801,11 @@ html {
   width: 0;
   height: 0;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.4) 0%, transparent 70%);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.4) 0%,
+    transparent 70%
+  );
   transform: translate(-50%, -50%);
   transition: width 0.8s ease, height 0.8s ease;
 }
@@ -838,7 +843,8 @@ html {
 
 /* Smooth Transitions for All Elements */
 * {
-  transition-property: transform, opacity, background-color, border-color, color, fill, stroke, box-shadow;
+  transition-property: transform, opacity, background-color, border-color, color,
+    fill, stroke, box-shadow;
   transition-duration: 0.3s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
