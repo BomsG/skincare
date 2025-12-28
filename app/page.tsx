@@ -48,8 +48,7 @@ export default function HomePage() {
     {
       title: "Radiate your",
       highlight: "light.",
-      subtitle:
-        "Feed your skin with high-quality botanicals for results you can see and feel..",
+      subtitle: "We dont belive in 10 step Routine!",
       bgImage: img3,
       cta: "Start Journey",
     },
@@ -173,7 +172,7 @@ export default function HomePage() {
                       variant="secondary"
                       className="mb-6 bg-white/20 text-gray-800 hover:bg-white/30 transition-all duration-500 hover:scale-110 backdrop-blur-sm animate-bounce-gentle"
                     >
-                      ✨ Soft • Clean • Effective
+                      Soft • Clean • Effective
                     </Badge>
                     <h1 className="text-5xl md:text-8xl font-serif font-bold text-white mb-6 tracking-wider">
                       {slide.title}
