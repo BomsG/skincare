@@ -31,20 +31,17 @@ const questions: Question[] = [
       {
         id: "oily",
         text: "Oily - Shiny, large pores, prone to breakouts",
-        icon: "💧",
       },
-      { id: "dry", text: "Dry - Tight, flaky, sometimes rough", icon: "🏜️" },
+      { id: "dry", text: "Dry - Tight, flaky, sometimes rough" },
       {
         id: "combination",
         text: "Combination - Oily T-zone, dry cheeks",
-        icon: "🌓",
       },
       {
         id: "sensitive",
         text: "Sensitive - Easily irritated, reactive",
-        icon: "🌸",
       },
-      { id: "normal", text: "Normal - Balanced, few concerns", icon: "✨" },
+      { id: "normal", text: "Normal - Balanced, few concerns" },
     ],
   },
   {
@@ -52,12 +49,12 @@ const questions: Question[] = [
     question: "What are your main skin concerns? (Select all that apply)",
     type: "multiple",
     options: [
-      { id: "acne", text: "Acne & Breakouts", icon: "🔴" },
-      { id: "aging", text: "Fine Lines & Wrinkles", icon: "⏰" },
-      { id: "dark-spots", text: "Dark Spots & Hyperpigmentation", icon: "🌑" },
-      { id: "dullness", text: "Dullness & Uneven Texture", icon: "😴" },
-      { id: "pores", text: "Large Pores", icon: "🕳️" },
-      { id: "redness", text: "Redness & Irritation", icon: "🔴" },
+      { id: "acne", text: "Acne & Breakouts" },
+      { id: "aging", text: "Fine Lines & Wrinkles" },
+      { id: "dark-spots", text: "Dark Spots & Hyperpigmentation" },
+      { id: "dullness", text: "Dullness & Uneven Texture" },
+      { id: "pores", text: "Large Pores" },
+      { id: "redness", text: "Redness & Irritation" },
     ],
   },
   {
@@ -65,13 +62,12 @@ const questions: Question[] = [
     question: "How often do you currently follow a skincare routine?",
     type: "single",
     options: [
-      { id: "never", text: "Never - I'm just starting out", icon: "🆕" },
-      { id: "sometimes", text: "Sometimes - When I remember", icon: "🤷" },
-      { id: "daily", text: "Daily - Morning or evening", icon: "📅" },
+      { id: "never", text: "Never - I'm just starting out" },
+      { id: "sometimes", text: "Sometimes - When I remember" },
+      { id: "daily", text: "Daily - Morning or evening" },
       {
         id: "twice-daily",
         text: "Twice daily - Morning and evening",
-        icon: "🌅🌙",
       },
     ],
   },
@@ -80,11 +76,11 @@ const questions: Question[] = [
     question: "What's your age range?",
     type: "single",
     options: [
-      { id: "teens", text: "13-19 years", icon: "👶" },
-      { id: "twenties", text: "20-29 years", icon: "🧑" },
-      { id: "thirties", text: "30-39 years", icon: "👩" },
-      { id: "forties", text: "40-49 years", icon: "👩‍🦳" },
-      { id: "fifties-plus", text: "50+ years", icon: "👵" },
+      { id: "teens", text: "13-19 years" },
+      { id: "twenties", text: "20-29 years" },
+      { id: "thirties", text: "30-39 years" },
+      { id: "forties", text: "40-49 years" },
+      { id: "fifties-plus", text: "50+ years" },
     ],
   },
   {
@@ -92,9 +88,9 @@ const questions: Question[] = [
     question: "How much time do you want to spend on your routine?",
     type: "single",
     options: [
-      { id: "minimal", text: "Minimal - 2-3 minutes", icon: "⚡" },
-      { id: "moderate", text: "Moderate - 5-10 minutes", icon: "⏱️" },
-      { id: "extensive", text: "Extensive - 15+ minutes", icon: "🧘" },
+      { id: "minimal", text: "Minimal - 2-3 minutes" },
+      { id: "moderate", text: "Moderate - 5-10 minutes" },
+      { id: "extensive", text: "Extensive - 15+ minutes" },
     ],
   },
 ];
@@ -172,7 +168,7 @@ export default function QuizPage() {
   if (showResults) {
     const results = getResults();
     return (
-      <div className="min-h-screen bg-gradient-to-br from-rose-50 to-purple-50 py-12 px-4">
+      <div className="min-h-screen bg-gradient-to-br from-rose-50 to-red-50 py-12 px-4">
         <div className="max-w-4xl mx-auto">
           <div className="text-center mb-12 animate-fade-in-up">
             <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6 animate-bounce">
@@ -224,7 +220,7 @@ export default function QuizPage() {
             <Card className="shadow-xl border-0 animate-slide-in-right">
               <CardHeader>
                 <CardTitle className="flex items-center gap-2">
-                  <Sparkles className="w-6 h-6 text-purple-600" />
+                  <Sparkles className="w-6 h-6 text-red-600" />
                   Recommended Routine
                 </CardTitle>
               </CardHeader>
@@ -305,7 +301,7 @@ export default function QuizPage() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-rose-50 to-purple-50 py-12 px-4">
+    <div className="min-h-screen bg-gradient-to-br from-rose-50 to-red-50 py-12 px-4">
       <div className="max-w-3xl mx-auto">
         <div className="text-center mb-8 animate-fade-in-up">
           <h1 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 mb-4">
@@ -316,7 +312,7 @@ export default function QuizPage() {
           </p>
           <div className="w-full bg-gray-200 rounded-full h-3 mb-4">
             <div
-              className="bg-gradient-to-r from-[#BF6159] to-purple-600 h-3 rounded-full transition-all duration-500 ease-out"
+              className="bg-gradient-to-r from-[#BF6159] to-red-600 h-3 rounded-full transition-all duration-500 ease-out"
               style={{ width: `${progress}%` }}
             />
           </div>
