@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, use } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -21,18 +21,22 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 
 interface ProductPageProps {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 }
 
 export default function ProductPage({ params }: ProductPageProps) {
+  const resolvedParams = use(params);
+  const slug = resolvedParams.slug;
+
   const [quantity, setQuantity] = useState(1);
   const [selectedImage, setSelectedImage] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const { addToCart } = useCart();
 
-  const product = products.find((p) => p.slug === params.slug);
+  // 2. Find the product using the unwrapped slug
+  const product = products.find((p) => p.slug === slug);
 
   useEffect(() => {
     setIsVisible(true);
@@ -40,8 +44,8 @@ export default function ProductPage({ params }: ProductPageProps) {
 
   if (!product) {
     notFound();
+    return null; // Return null to prevent further rendering attempts
   }
-
   const handleAddToCart = () => {
     addToCart({
       id: product.id,
