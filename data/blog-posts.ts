@@ -1,15 +1,15 @@
 export interface BlogPost {
-  id: string
-  title: string
-  slug: string
-  excerpt: string
-  content: string
-  author: string
-  date: string // ISO string (yyyy-mm-dd)
-  readTime: string
-  category: string
-  image: string
-  featured: boolean
+  id: string;
+  title: string;
+  slug: string;
+  excerpt: string;
+  content: string;
+  author: string;
+  date: string; // ISO string (yyyy-mm-dd)
+  readTime: string;
+  category: string;
+  image: string;
+  featured: boolean;
 }
 
 /* ----- Demo content ----- */
@@ -25,20 +25,21 @@ export const blogPosts: BlogPost[] = [
     date: "2024-03-15",
     readTime: "8 min read",
     category: "Skincare Basics",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/images/b1.jpg?height=400&width=600",
     featured: true,
   },
   {
     id: "2",
     title: "Understanding Your Skin Type: A Dermatologist's Guide",
     slug: "understanding-your-skin-type",
-    excerpt: "Learn how to identify your skin type and choose products that will work best for your unique needs.",
+    excerpt:
+      "Learn how to identify your skin type and choose products that will work best for your unique needs.",
     content: `<p>(Full article content …)</p>`,
     author: "Dr. Emily Chen",
     date: "2024-03-12",
     readTime: "6 min read",
     category: "Skin Science",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/images/b2.jpg?height=400&width=600",
     featured: false,
   },
   {
@@ -52,8 +53,8 @@ export const blogPosts: BlogPost[] = [
     date: "2024-03-10",
     readTime: "10 min read",
     category: "Ingredients",
-    image: "/placeholder.svg?height=400&width=600",
+    image: "/images/b3.jpg?placeholder.svg?height=400&width=600",
     featured: true,
   },
   /* add the remaining posts here … */
-]
+];

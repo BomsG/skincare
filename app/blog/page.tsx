@@ -107,7 +107,7 @@ export default function BlogPage() {
                         className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                      <Badge className="absolute top-4 left-4 bg-rose-600 animate-pulse-glow">
+                      <Badge className="absolute top-4 left-4 bg-[#BF6159] animate-pulse-glow">
                         Featured
                       </Badge>
                     </div>
@@ -123,7 +123,7 @@ export default function BlogPage() {
                         </div>
                         <Badge variant="secondary">{post.category}</Badge>
                       </div>
-                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-rose-600 transition-colors duration-300">
+                      <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-[#BF6159] transition-colors duration-300">
                         {post.title}
                       </h3>
                       <p className="text-gray-600 mb-4 line-clamp-3">
@@ -137,7 +137,7 @@ export default function BlogPage() {
                         <Button
                           asChild
                           variant="ghost"
-                          className="text-rose-600 hover:text-rose-700 hover:bg-rose-50 group-hover:translate-x-1 transition-all duration-300"
+                          className="text-[#BF6159] hover:text-[#e4796f] hover:bg-rose-50 group-hover:translate-x-1 transition-all duration-300"
                         >
                           <Link href={`/blog/${post.slug}`}>
                             Read More <ArrowRight className="w-4 h-4 ml-1" />
@@ -186,7 +186,7 @@ export default function BlogPage() {
                     <Badge variant="secondary" className="mb-3">
                       {post.category}
                     </Badge>
-                    <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-rose-600 transition-colors duration-300">
+                    <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-[#BF6159] transition-colors duration-300">
                       {post.title}
                     </h3>
                     <p className="text-gray-600 mb-4 text-sm line-clamp-3">
@@ -201,7 +201,7 @@ export default function BlogPage() {
                         asChild
                         variant="ghost"
                         size="sm"
-                        className="text-rose-600 hover:text-rose-700 hover:bg-rose-50 group-hover:translate-x-1 transition-all duration-300"
+                        className="text-[#BF6159] hover:text-[#e98177] hover:bg-rose-50 group-hover:translate-x-1 transition-all duration-300"
                       >
                         <Link href={`/blog/${post.slug}`}>
                           Read <ArrowRight className="w-4 h-4 ml-1" />
