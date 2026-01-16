@@ -33,22 +33,21 @@ export default function HomePage() {
       title: "Beauty that",
       highlight: "heals.",
       subtitle:
-        "Discover your perfect skincare routine with our curated collection of clean, effective products.",
+        "Discover your skincare routine with our  collection of effective products.",
       bgImage: img1,
       cta: "Shop Now",
     },
     {
       title: "Effortless Glow",
       highlight: "unleashed.",
-      subtitle:
-        "Reveal radiant skin through our nature-powered, clinically-tested solutions.",
+      subtitle: "Reveal radiant skin through our  clinically-tested solutions.",
       bgImage: img2,
       cta: "Explore Products",
     },
     {
       title: "Radiate your",
       highlight: "light.",
-      subtitle: "We dont belive in 10 step Routine!",
+      subtitle: "We dont belive in 10 step Routine, quicker is better!",
       bgImage: img3,
       cta: "Start Journey",
     },
@@ -117,7 +116,7 @@ export default function HomePage() {
 
   const prevSlide = () => {
     setCurrentSlide(
-      (prev) => (prev - 1 + heroSlides.length) % heroSlides.length
+      (prev) => (prev - 1 + heroSlides.length) % heroSlides.length,
     );
   };
 
@@ -144,8 +143,8 @@ export default function HomePage() {
                 index === currentSlide
                   ? "opacity-100 scale-100 translate-x-0"
                   : index < currentSlide
-                  ? "opacity-0 scale-95 -translate-x-full"
-                  : "opacity-0 scale-95 translate-x-full"
+                    ? "opacity-0 scale-95 -translate-x-full"
+                    : "opacity-0 scale-95 translate-x-full"
               }`}
             >
               {/* Animated Background Elements */}
@@ -174,13 +173,13 @@ export default function HomePage() {
                     >
                       Soft • Clean • Effective
                     </Badge>
-                    <h1 className="text-5xl md:text-8xl font-serif font-bold text-white mb-6 tracking-wider">
+                    <h1 className="text-3xl md:text-8xl font-serif font-bold text-white mb-6 tracking-wider">
                       {slide.title}
                       <span className="block text-[#BF6159] animate-gradient-text-mega bg-gradient-to-r from-[#BF6159] via-pink-600 to-[#BF6159] bg-clip-text text-transparent">
                         {slide.highlight}
                       </span>
                     </h1>
-                    <p className="text-[16px] md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
+                    <p className="text-[14px] md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto leading-relaxed">
                       {slide.subtitle}
                     </p>
                     <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -475,8 +474,8 @@ export default function HomePage() {
                   index === testimonialSlide
                     ? "opacity-100 transform translate-x-0 scale-100"
                     : index < testimonialSlide
-                    ? "opacity-0 transform -translate-x-full scale-95"
-                    : "opacity-0 transform translate-x-full scale-95"
+                      ? "opacity-0 transform -translate-x-full scale-95"
+                      : "opacity-0 transform translate-x-full scale-95"
                 }`}
               >
                 <Card className="bg-white/95 backdrop-blur-sm shadow-2xl max-w-4xl mx-auto">
