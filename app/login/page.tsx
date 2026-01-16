@@ -1,21 +1,25 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Input } from "@/components/ui/input"
-import { Label } from "@/components/ui/label"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { Checkbox } from "@/components/ui/checkbox"
-import Link from "next/link"
-import { Eye, EyeOff, Mail, Lock, User } from "lucide-react"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Input } from "@/components/ui/input";
+import { Label } from "@/components/ui/label";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Checkbox } from "@/components/ui/checkbox";
+import Link from "next/link";
+import { Eye, EyeOff, Mail, Lock, User } from "lucide-react";
 
 export default function LoginPage() {
-  const [showPassword, setShowPassword] = useState(false)
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false)
-  const [loginData, setLoginData] = useState({ email: "", password: "", remember: false })
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [loginData, setLoginData] = useState({
+    email: "",
+    password: "",
+    remember: false,
+  });
   const [signupData, setSignupData] = useState({
     firstName: "",
     lastName: "",
@@ -23,25 +27,27 @@ export default function LoginPage() {
     password: "",
     confirmPassword: "",
     newsletter: false,
-  })
+  });
 
   const handleLogin = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle login logic here
-    console.log("Login:", loginData)
-  }
+    console.log("Login:", loginData);
+  };
 
   const handleSignup = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle signup logic here
-    console.log("Signup:", signupData)
-  }
+    console.log("Signup:", signupData);
+  };
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-rose-50 to-amber-50 flex items-center justify-center p-4">
       <div className="w-full max-w-md">
         <div className="text-center mb-8">
-          <h1 className="text-3xl font-serif font-bold text-gray-900 mb-2">Welcome Back</h1>
+          <h1 className="text-3xl font-serif font-bold text-gray-900 mb-2">
+            Welcome Back
+          </h1>
           <p className="text-gray-600">Sign in to your skincare journey</p>
         </div>
 
@@ -65,7 +71,9 @@ export default function LoginPage() {
                         placeholder="Enter your email"
                         className="pl-10"
                         value={loginData.email}
-                        onChange={(e) => setLoginData({ ...loginData, email: e.target.value })}
+                        onChange={(e) =>
+                          setLoginData({ ...loginData, email: e.target.value })
+                        }
                         required
                       />
                     </div>
@@ -81,7 +89,12 @@ export default function LoginPage() {
                         placeholder="Enter your password"
                         className="pl-10 pr-10"
                         value={loginData.password}
-                        onChange={(e) => setLoginData({ ...loginData, password: e.target.value })}
+                        onChange={(e) =>
+                          setLoginData({
+                            ...loginData,
+                            password: e.target.value,
+                          })
+                        }
                         required
                       />
                       <button
@@ -89,7 +102,11 @@ export default function LoginPage() {
                         onClick={() => setShowPassword(!showPassword)}
                         className="absolute right-3 top-3 text-gray-400 hover:text-gray-600"
                       >
-                        {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                        {showPassword ? (
+                          <EyeOff className="h-4 w-4" />
+                        ) : (
+                          <Eye className="h-4 w-4" />
+                        )}
                       </button>
                     </div>
                   </div>
@@ -99,18 +116,29 @@ export default function LoginPage() {
                       <Checkbox
                         id="remember"
                         checked={loginData.remember}
-                        onCheckedChange={(checked) => setLoginData({ ...loginData, remember: checked as boolean })}
+                        onCheckedChange={(checked) =>
+                          setLoginData({
+                            ...loginData,
+                            remember: checked as boolean,
+                          })
+                        }
                       />
                       <Label htmlFor="remember" className="text-sm">
                         Remember me
                       </Label>
                     </div>
-                    <Link href="/forgot-password" className="text-sm text-rose-600 hover:text-rose-700">
+                    <Link
+                      href="/forgot-password"
+                      className="text-sm test-[#BF6159] hover:text-[#BF6159]"
+                    >
                       Forgot password?
                     </Link>
                   </div>
 
-                  <Button type="submit" className="w-full bg-rose-600 hover:bg-rose-700">
+                  <Button
+                    type="submit"
+                    className="w-full bg-[#BF6159] hover:bg-[#c0746d]"
+                  >
                     Sign In
                   </Button>
                 </form>
@@ -120,7 +148,9 @@ export default function LoginPage() {
                     <span className="w-full border-t" />
                   </div>
                   <div className="relative flex justify-center text-xs uppercase">
-                    <span className="bg-white px-2 text-gray-500">Or continue with</span>
+                    <span className="bg-white px-2 text-gray-500">
+                      Or continue with
+                    </span>
                   </div>
                 </div>
 
@@ -147,7 +177,11 @@ export default function LoginPage() {
                     Google
                   </Button>
                   <Button variant="outline" type="button">
-                    <svg className="mr-2 h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                    <svg
+                      className="mr-2 h-4 w-4"
+                      fill="currentColor"
+                      viewBox="0 0 24 24"
+                    >
                       <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
                     </svg>
                     Twitter
@@ -167,7 +201,12 @@ export default function LoginPage() {
                           placeholder="First name"
                           className="pl-10"
                           value={signupData.firstName}
-                          onChange={(e) => setSignupData({ ...signupData, firstName: e.target.value })}
+                          onChange={(e) =>
+                            setSignupData({
+                              ...signupData,
+                              firstName: e.target.value,
+                            })
+                          }
                           required
                         />
                       </div>
@@ -181,7 +220,12 @@ export default function LoginPage() {
                           placeholder="Last name"
                           className="pl-10"
                           value={signupData.lastName}
-                          onChange={(e) => setSignupData({ ...signupData, lastName: e.target.value })}
+                          onChange={(e) =>
+                            setSignupData({
+                              ...signupData,
+                              lastName: e.target.value,
+                            })
+                          }
                           required
                         />
                       </div>
@@ -198,7 +242,12 @@ export default function LoginPage() {
                         placeholder="Enter your email"
                         className="pl-10"
                         value={signupData.email}
-                        onChange={(e) => setSignupData({ ...signupData, email: e.target.value })}
+                        onChange={(e) =>
+                          setSignupData({
+                            ...signupData,
+                            email: e.target.value,
+                          })
+                        }
                         required
                       />
                     </div>
@@ -214,7 +263,12 @@ export default function LoginPage() {
                         placeholder="Create a password"
                         className="pl-10 pr-10"
                         value={signupData.password}
-                        onChange={(e) => setSignupData({ ...signupData, password: e.target.value })}
+                        onChange={(e) =>
+                          setSignupData({
+                            ...signupData,
+                            password: e.target.value,
+                          })
+                        }
                         required
                       />
                       <button
@@ -222,7 +276,11 @@ export default function LoginPage() {
                         onClick={() => setShowPassword(!showPassword)}
                         className="absolute right-3 top-3 text-gray-400 hover:text-gray-600"
                       >
-                        {showPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                        {showPassword ? (
+                          <EyeOff className="h-4 w-4" />
+                        ) : (
+                          <Eye className="h-4 w-4" />
+                        )}
                       </button>
                     </div>
                   </div>
@@ -237,15 +295,26 @@ export default function LoginPage() {
                         placeholder="Confirm your password"
                         className="pl-10 pr-10"
                         value={signupData.confirmPassword}
-                        onChange={(e) => setSignupData({ ...signupData, confirmPassword: e.target.value })}
+                        onChange={(e) =>
+                          setSignupData({
+                            ...signupData,
+                            confirmPassword: e.target.value,
+                          })
+                        }
                         required
                       />
                       <button
                         type="button"
-                        onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                        onClick={() =>
+                          setShowConfirmPassword(!showConfirmPassword)
+                        }
                         className="absolute right-3 top-3 text-gray-400 hover:text-gray-600"
                       >
-                        {showConfirmPassword ? <EyeOff className="h-4 w-4" /> : <Eye className="h-4 w-4" />}
+                        {showConfirmPassword ? (
+                          <EyeOff className="h-4 w-4" />
+                        ) : (
+                          <Eye className="h-4 w-4" />
+                        )}
                       </button>
                     </div>
                   </div>
@@ -254,25 +323,40 @@ export default function LoginPage() {
                     <Checkbox
                       id="newsletter-signup"
                       checked={signupData.newsletter}
-                      onCheckedChange={(checked) => setSignupData({ ...signupData, newsletter: checked as boolean })}
+                      onCheckedChange={(checked) =>
+                        setSignupData({
+                          ...signupData,
+                          newsletter: checked as boolean,
+                        })
+                      }
                     />
                     <Label htmlFor="newsletter-signup" className="text-sm">
-                      Subscribe to our newsletter for skincare tips and exclusive offers
+                      Subscribe to our newsletter for skincare tips and
+                      exclusive offers
                     </Label>
                   </div>
 
-                  <Button type="submit" className="w-full bg-rose-600 hover:bg-rose-700">
+                  <Button
+                    type="submit"
+                    className="w-full bg-[#BF6159] hover:bg-[#eb8177]"
+                  >
                     Create Account
                   </Button>
                 </form>
 
                 <p className="text-xs text-center text-gray-500">
                   By creating an account, you agree to our{" "}
-                  <Link href="/terms" className="text-rose-600 hover:text-rose-700">
+                  <Link
+                    href="/terms"
+                    className="text-[#BF6159] hover:text-[#BF6159]"
+                  >
                     Terms of Service
                   </Link>{" "}
                   and{" "}
-                  <Link href="/privacy" className="text-rose-600 hover:text-rose-700">
+                  <Link
+                    href="/privacy"
+                    className="text-[#BF6159] hover:text-[#BF6159]"
+                  >
                     Privacy Policy
                   </Link>
                 </p>
@@ -284,12 +368,15 @@ export default function LoginPage() {
         <div className="text-center mt-6">
           <p className="text-sm text-gray-600">
             Need help?{" "}
-            <Link href="/support" className="text-rose-600 hover:text-rose-700">
+            <Link
+              href="/support"
+              className="text-[#BF6159] hover:text-[#e8887f]"
+            >
               Contact Support
             </Link>
           </p>
         </div>
       </div>
     </div>
-  )
+  );
 }
